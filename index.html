@@ -169,15 +169,11 @@
     .tl-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 1.7rem 2rem; transition: all 0.22s; }
     .tl-item:hover .tl-card { border-color: var(--border-hi); transform: translateX(4px); box-shadow: 0 8px 28px rgba(0,0,0,0.3); }
 
-    .tl-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .tl-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; }
     .tl-role { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; color: var(--cream); }
     .tl-badges { display: flex; gap: 0.45rem; flex-wrap: wrap; align-items: center; }
     .tl-co { font-size: 0.68rem; font-weight: 600; color: var(--gold); background: var(--gold-dim); border: 1px solid var(--border-hi); padding: 0.18rem 0.6rem; border-radius: 5px; letter-spacing: 0.04em; }
     .tl-date { font-family: var(--mono); font-size: 0.63rem; color: var(--text-dim); background: var(--bg3); border: 1px solid var(--border); padding: 0.18rem 0.6rem; border-radius: 5px; }
-
-    .tl-pts { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-    .tl-pts li { font-size: 0.84rem; color: var(--text-mid); line-height: 1.75; padding-left: 1.1rem; position: relative; }
-    .tl-pts li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 0.62rem; top: 0.22rem; }
 
     .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
     .proj-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.24s; }
@@ -192,12 +188,10 @@
     .plink { font-size: 0.63rem; font-family: var(--mono); text-decoration: none; color: var(--gold); border: 1px solid var(--border-hi); padding: 0.18rem 0.55rem; border-radius: 5px; transition: all 0.18s; flex-shrink: 0; }
     .plink:hover { background: var(--gold); color: var(--bg); }
 
-    /* ══ SKILLS — updated layout ══ */
     .sk-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 1.8rem; transition: all 0.22s; }
     .sk-card:hover { border-color: var(--border-hi); box-shadow: 0 8px 28px rgba(0,0,0,0.3); transform: translateY(-2px); }
     .sk-title { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--cream); margin-bottom: 1.4rem; display: flex; align-items: center; gap: 0.6rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border); }
     .sk-ico { font-size: 1rem; }
-
     .sk-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 
     .bars { display: flex; flex-direction: column; gap: 1rem; }
@@ -395,11 +389,6 @@
               <span class="tl-date">Nov 2025 — Present</span>
             </div>
           </div>
-          <ul class="tl-pts">
-            <li>Architected a MySQL data pipeline consolidating environmental datasets from 6 regions and 40+ countries across 2M+ records using Python (Pandas), enabling scalable SQL-based analysis.</li>
-            <li>Reduced downstream analysis errors by 90% by designing a full ETL cleaning workflow applying imputation, normalization, and deduplication across 40+ variables using SQL joins, CTEs, and aggregations.</li>
-            <li>Delivered 3 Tableau dashboards tracking emissions and climate indicators, improving reporting turnaround by 50% and enabling data-driven decisions for 5 project stakeholders.</li>
-          </ul>
         </div>
       </div>
 
@@ -413,11 +402,6 @@
               <span class="tl-date">May – Dec 2023</span>
             </div>
           </div>
-          <ul class="tl-pts">
-            <li>Engineered automated ETL pipelines using Python (Pandas, NumPy) and SQL to process 100K+ records, reducing manual preparation time by 35% and ensuring analysis-ready data for weekly operational reporting.</li>
-            <li>Developed a regression-based predictive model using Scikit-learn forecasting project delivery timelines with 87% accuracy, enabling project managers to reduce late deliveries by 20%.</li>
-            <li>Built 2 Power BI dashboards consolidating delivery performance, staffing utilization, and client SLA metrics across 8 accounts, reducing ad hoc reporting requests by 40%.</li>
-          </ul>
         </div>
       </div>
 
@@ -431,11 +415,6 @@
               <span class="tl-date">Dec 2022 – Mar 2023</span>
             </div>
           </div>
-          <ul class="tl-pts">
-            <li>Maintained a MySQL database of 1,500+ student assessment records, writing SQL queries, stored procedures, and triggers to automate insertions and ensure platform-wide data consistency.</li>
-            <li>Executed SQL audit queries using joins and aggregations to validate data quality across subject, difficulty, and grade fields, improving content team reporting accuracy.</li>
-            <li>Developed Python (Pandas) scripts to extract question data from Excel and load into MySQL, cutting manual data entry effort by 40%.</li>
-          </ul>
         </div>
       </div>
 
@@ -616,7 +595,7 @@
     </div>
   </section>
 
-  <!-- SKILLS — updated from resume -->
+  <!-- SKILLS -->
   <section class="sec" id="skills">
     <div class="eyebrow">Technical Toolkit</div>
     <h1 class="sec-title">My <em>Skills</em></h1>
@@ -624,9 +603,7 @@
 
     <div class="sk-card" style="max-width: 860px;">
       <div class="sk-title"><span class="sk-ico">⚡</span>Core Proficiencies</div>
-
       <div class="sk-two-col">
-        <!-- LEFT: skill bars -->
         <div class="bars">
           <div class="bar-r">
             <div class="bar-top"><span class="bar-n">SQL (MySQL · PostgreSQL · Snowflake)</span><span class="bar-p">92%</span></div>
@@ -658,7 +635,6 @@
           </div>
         </div>
 
-        <!-- RIGHT: chip groups -->
         <div style="display:flex;flex-direction:column;gap:1.4rem;">
           <div>
             <div class="sk-group-label">Databases & Cloud</div>
